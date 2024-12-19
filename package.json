@@ -1,23 +1,35 @@
 {
   "name": "react-success-modal",
-  "private": true,
-  "version": "1.0.0",
+  "private": false,
+  "version": "1.0.9",
   "description": "A customizable success modal dialog for React",
-  "main": "dist/SuccessModal.jsx",
-  "module": "dist/SuccessModal.jsx",
+  "main": "dist/success-modal.es.js",
+  "module": "dist/success-modal.umd.js",
   "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/success-modal.es.js",
+      "require": "./dist/success-modal.umd.js"
+    }
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"
   },
   "dependencies": {
+    "prop-types": "^15.8.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "sass": "^1.83.0"
   },
+  "devDependencies": {
+    "vite": "^6.0.4",
+    "@vitejs/plugin-react": "^4.3.4"
+  },
   "files": [
-    "dist"
+    "dist",
+    "src"
   ],
   "keywords": [
     "react",

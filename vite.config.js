@@ -8,15 +8,17 @@ export default defineConfig({
     lib: {
       entry: './src/SuccessModal.jsx',
       name: 'SuccessModal',
-      fileName: () => `success-modal.jsx`,
+      fileName: (format) => `success-modal.${format}.js`,
     },
     rollupOptions: {
       external: ['react', 'react-dom'],
       output: {
+        format: ['es', 'cjs', 'umd'],
         globals: {
           react: 'React',
           'react-dom': 'ReactDOM',
         },
+        exports: 'auto',
       },
     },
   },
